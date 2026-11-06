@@ -5,3 +5,5 @@
   description: SOC 2 CC6.1, CC6.3. Prevents direct logins as root so privileged actions are attributable to a named user. (CIS 5.6)
   resolution: Run 'sudo dsenableroot -d'.
   platform: darwin
+  run_script:
+    path: ../scripts/disable-root-account.sh

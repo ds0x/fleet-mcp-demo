@@ -1,0 +1,22 @@
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/WDigestAuthentication</LocURI>
+    </Target>
+    <Data>&lt;disabled/&gt;</Data>
+  </Item>
+</Replace>
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1Server</LocURI>
+    </Target>
+    <Data>&lt;disabled/&gt;</Data>
+  </Item>
+</Replace>
