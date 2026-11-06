@@ -1,0 +1,7 @@
+- name: '[SOC 2] macOS - System Integrity Protection enabled'
+  query: |
+    SELECT 1 WHERE EXISTS (SELECT 1 FROM sip_config WHERE config_flag='sip' AND enabled=1);
+  critical: false
+  description: SOC 2 CC6.8. Prevents modification of protected system files, including by malware running as root. (CIS 5.1.2)
+  resolution: Boot into Recovery, open Terminal, run 'csrutil enable', and restart.
+  platform: darwin

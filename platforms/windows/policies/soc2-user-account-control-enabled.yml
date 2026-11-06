@@ -1,0 +1,7 @@
+- name: '[SOC 2] Windows - User Account Control enabled'
+  query: |
+    SELECT 1 FROM windows_security_center WHERE user_account_control = 'Good';
+  critical: false
+  description: SOC 2 CC6.1, CC6.3. Requires elevation for administrative actions.
+  resolution: 'Set ''User Account Control: Run all administrators in Admin Approval Mode'' to Enabled (EnableLUA = 1) and restart.'
+  platform: windows

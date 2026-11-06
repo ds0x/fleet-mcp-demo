@@ -1,0 +1,7 @@
+- name: '[SOC 2] macOS - FileVault disk encryption enabled'
+  query: |
+    SELECT 1 FROM disk_encryption WHERE user_uuid IS NOT '' AND filevault_status = 'on' LIMIT 1;
+  critical: true
+  description: SOC 2 CC6.1, CC6.7. Protects data at rest if the Mac is lost or stolen.
+  resolution: Turn on FileVault in System Settings > Privacy & Security, or enforce it with Fleet's disk encryption setting and escrow the recovery key.
+  platform: darwin

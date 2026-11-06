@@ -1,0 +1,7 @@
+- name: '[SOC 2] Windows - Automatic updates healthy'
+  query: |
+    SELECT 1 FROM windows_security_center WHERE autoupdate = 'Good';
+  critical: false
+  description: SOC 2 CC7.1, CC8.1. Windows Security Center reports Windows Update as on and healthy.
+  resolution: Turn on automatic updates in Settings > Windows Update, or configure the Update policy CSP via MDM.
+  platform: windows

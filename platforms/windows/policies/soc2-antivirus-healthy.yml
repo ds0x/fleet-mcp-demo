@@ -1,0 +1,7 @@
+- name: '[SOC 2] Windows - Antivirus healthy'
+  query: |
+    SELECT 1 FROM windows_security_center WHERE antivirus = 'Good';
+  critical: true
+  description: SOC 2 CC6.8. Windows Security Center reports antivirus protection as on and healthy.
+  resolution: Turn on Microsoft Defender real-time protection, or confirm your third-party antivirus is running and registered with Windows Security Center.
+  platform: windows

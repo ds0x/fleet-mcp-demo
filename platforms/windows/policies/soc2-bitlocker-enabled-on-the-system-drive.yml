@@ -1,0 +1,7 @@
+- name: '[SOC 2] Windows - BitLocker enabled on the system drive'
+  query: |
+    SELECT 1 FROM bitlocker_info WHERE drive_letter='C:' AND protection_status = 1;
+  critical: true
+  description: SOC 2 CC6.1, CC6.7. Protects data at rest if the PC is lost or stolen.
+  resolution: Turn on BitLocker for C:, or enforce it with Fleet's disk encryption setting and escrow the recovery key.
+  platform: windows

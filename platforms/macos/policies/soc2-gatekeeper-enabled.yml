@@ -1,0 +1,7 @@
+- name: '[SOC 2] macOS - Gatekeeper enabled'
+  query: |
+    SELECT 1 FROM gatekeeper WHERE assessments_enabled = 1;
+  critical: false
+  description: SOC 2 CC6.8. Only allows apps from the App Store and identified developers to run.
+  resolution: Run 'sudo spctl --master-enable', or deploy a com.apple.systempolicy.control profile with EnableAssessment = true.
+  platform: darwin

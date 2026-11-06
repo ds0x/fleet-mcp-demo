@@ -1,0 +1,7 @@
+- name: '[SOC 2] Windows - SMBv1 server disabled'
+  query: |
+    SELECT 1 FROM registry WHERE path = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters\SMB1' AND data = '0';
+  critical: false
+  description: SOC 2 CC6.6, CC7.1. Removes a legacy protocol exploited by worms such as WannaCry. (CIS 4.4.3)
+  resolution: Set 'Configure SMB v1 server' to Disabled, or run 'Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol'.
+  platform: windows

@@ -1,0 +1,7 @@
+- name: '[SOC 2] Windows - Antivirus signatures up to date'
+  query: |
+    SELECT 1 WHERE EXISTS (SELECT 1 FROM windows_security_products WHERE type = 'Antivirus' AND signatures_up_to_date = 1);
+  critical: false
+  description: SOC 2 CC6.8, CC7.1. Antivirus definitions are current.
+  resolution: Run a definition update from Windows Security > Virus & threat protection > Protection updates, and confirm the device can reach Microsoft Update.
+  platform: windows

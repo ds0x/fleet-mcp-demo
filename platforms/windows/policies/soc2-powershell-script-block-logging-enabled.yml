@@ -1,0 +1,7 @@
+- name: '[SOC 2] Windows - PowerShell script block logging enabled'
+  query: |
+    SELECT 1 FROM mdm_bridge WHERE mdm_command_input = '<SyncBody><Get><CmdID>1</CmdID><Item><Target><LocURI>./Device/Vendor/MSFT/Policy/Result/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging</LocURI></Target></Item></Get></SyncBody>' AND mdm_command_output LIKE '%<Enabled/>%';
+  critical: false
+  description: SOC 2 CC7.2. Records PowerShell activity so security events can be detected and investigated. (CIS 4.11.54.1)
+  resolution: Enable 'Turn on PowerShell Script Block Logging' via Group Policy or the WindowsPowerShell/TurnOnPowerShellScriptBlockLogging MDM CSP.
+  platform: windows
