@@ -69,9 +69,10 @@ controls:
     configuration_profiles:
       - paths: ../platforms/macos/declaration-profiles/*.json
       - paths: ../platforms/macos/configuration-profiles/*.mobileconfig
-  windows_settings:
-    configuration_profiles:
-      - paths: ../platforms/windows/configuration-profiles/*.xml
+  # Deferred until Windows MDM is turned on in default.yml.
+  # windows_settings:
+  #   configuration_profiles:
+  #     - paths: ../platforms/windows/configuration-profiles/*.xml
 
   ###########################################################
   # Managed disk encryption
@@ -103,9 +104,10 @@ controls:
     deadline: "2026-11-20"
     minimum_version: "26.1"
     update_new_hosts: true
-  windows_updates:
-    deadline_days: 7
-    grace_period_days: 2
+  # Deferred until Windows MDM is turned on in default.yml.
+  # windows_updates:
+  #   deadline_days: 7
+  #   grace_period_days: 2
 
   ###########################################################
   # Script library

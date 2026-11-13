@@ -113,8 +113,9 @@ controls:
   #   • https://fleetdm.com/guides/windows-mdm-setup
   ###########################################################
   # Required for the SOC 2 Windows profiles and BitLocker escrow
-  # in the 💻 Workstations fleet.
-  windows_enabled_and_configured: true
+  # in the 💻 Workstations fleet. Deferred until the Fleet server
+  # has a Windows MDM certificate and key pair configured.
+  # windows_enabled_and_configured: true
 
 
 ###########################################################
