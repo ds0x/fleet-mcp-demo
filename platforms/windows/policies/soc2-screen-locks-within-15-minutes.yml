@@ -1,0 +1,7 @@
+- name: '[SOC 2] Windows - Screen locks within 15 minutes'
+  query: |
+    SELECT 1 FROM registry WHERE path = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\InactivityTimeoutSecs' AND CAST(data AS INTEGER) BETWEEN 1 AND 900;
+  critical: false
+  description: 'SOC 2 CC6.1. Prevents unauthorized use of an unattended, logged-in PC (Interactive logon: Machine inactivity limit).'
+  resolution: 'Set ''Interactive logon: Machine inactivity limit'' to 900 seconds or less, or configure DeviceLock/MaxInactivityTimeDeviceLock via MDM.'
+  platform: windows

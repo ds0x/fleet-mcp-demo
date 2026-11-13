@@ -1,0 +1,7 @@
+- name: '[SOC 2] Windows - Firewall healthy'
+  query: |
+    SELECT 1 FROM windows_security_center WHERE firewall = 'Good';
+  critical: false
+  description: SOC 2 CC6.6. Windows Security Center reports the firewall as on and healthy.
+  resolution: Turn on Windows Defender Firewall for the Domain, Private and Public profiles (Windows Security > Firewall & network protection).
+  platform: windows

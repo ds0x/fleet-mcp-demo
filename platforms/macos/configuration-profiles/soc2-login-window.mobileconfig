@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DisableGuestAccount</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Disable guest account</string>
+			<key>PayloadIdentifier</key>
+			<string>com.intentoperations.soc2.loginwindow.payload</string>
+			<key>PayloadType</key>
+			<string>com.apple.loginwindow</string>
+			<key>PayloadUUID</key>
+			<string>E0F1D4BA-2C6A-4AC1-A9F3-179BFFBEDB44</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>SOC 2 endpoint control. Managed by the fleet-mcp-demo GitOps repo.</string>
+	<key>PayloadDisplayName</key>
+	<string>[SOC 2] Disable guest account</string>
+	<key>PayloadIdentifier</key>
+	<string>com.intentoperations.soc2.loginwindow</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>2F938745-12E2-4CC8-9B89-0674B4D329A2</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

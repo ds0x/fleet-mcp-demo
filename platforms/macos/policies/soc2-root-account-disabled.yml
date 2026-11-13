@@ -1,0 +1,9 @@
+- name: '[SOC 2] macOS - Root account disabled'
+  query: |
+    SELECT 1 FROM dscl WHERE command = 'read' AND path = '/Users/root' AND key = 'AuthenticationAuthority' AND value = '';
+  critical: false
+  description: SOC 2 CC6.1, CC6.3. Prevents direct logins as root so privileged actions are attributable to a named user. (CIS 5.6)
+  resolution: Run 'sudo dsenableroot -d'.
+  platform: darwin
+  run_script:
+    path: ../scripts/disable-root-account.sh

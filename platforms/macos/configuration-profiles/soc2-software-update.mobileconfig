@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AutomaticCheckEnabled</key>
+			<true/>
+			<key>AutomaticDownload</key>
+			<true/>
+			<key>AutomaticallyInstallMacOSUpdates</key>
+			<true/>
+			<key>CriticalUpdateInstall</key>
+			<true/>
+			<key>ConfigDataInstall</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Automatic software updates</string>
+			<key>PayloadIdentifier</key>
+			<string>com.intentoperations.soc2.softwareupdate.payload</string>
+			<key>PayloadType</key>
+			<string>com.apple.SoftwareUpdate</string>
+			<key>PayloadUUID</key>
+			<string>687B2C86-8556-42C9-BCB4-14EC6E5CC443</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>SOC 2 endpoint control. Managed by the fleet-mcp-demo GitOps repo.</string>
+	<key>PayloadDisplayName</key>
+	<string>[SOC 2] Automatic software updates</string>
+	<key>PayloadIdentifier</key>
+	<string>com.intentoperations.soc2.softwareupdate</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>7B479487-8DCA-4631-9A56-79132A74D6E4</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

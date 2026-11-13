@@ -1,0 +1,7 @@
+- name: '[SOC 2] macOS - Account lockout after 5 or fewer failed logins'
+  query: |
+    SELECT 1 FROM pwd_policy WHERE max_failed_attempts <= 5;
+  critical: false
+  description: SOC 2 CC6.1. Limits password-guessing attacks. (CIS 5.2.1)
+  resolution: Deploy a com.apple.mobiledevice.passwordpolicy profile with maxFailedAttempts of 5 or less.
+  platform: darwin

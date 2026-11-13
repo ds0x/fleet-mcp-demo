@@ -1,0 +1,22 @@
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">int</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode</LocURI>
+    </Target>
+    <Data>1</Data>
+  </Item>
+</Replace>
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">int</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit</LocURI>
+    </Target>
+    <Data>900</Data>
+  </Item>
+</Replace>

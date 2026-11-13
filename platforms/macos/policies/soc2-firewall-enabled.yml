@@ -1,0 +1,7 @@
+- name: '[SOC 2] macOS - Firewall enabled'
+  query: |
+    SELECT 1 FROM alf WHERE global_state >= 1;
+  critical: false
+  description: SOC 2 CC6.6. Blocks unsolicited inbound network connections.
+  resolution: Turn on the firewall in System Settings > Network > Firewall, or deploy a com.apple.security.firewall profile with EnableFirewall = true.
+  platform: darwin

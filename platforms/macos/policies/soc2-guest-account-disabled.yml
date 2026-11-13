@@ -1,0 +1,7 @@
+- name: '[SOC 2] macOS - Guest account disabled'
+  query: |
+    SELECT 1 FROM managed_policies WHERE domain='com.apple.loginwindow' AND name='DisableGuestAccount' AND (value='1' OR value='true') LIMIT 1;
+  critical: false
+  description: SOC 2 CC6.1, CC6.2. Ensures every login is tied to an identified user.
+  resolution: Deploy a com.apple.loginwindow profile with DisableGuestAccount = true.
+  platform: darwin
